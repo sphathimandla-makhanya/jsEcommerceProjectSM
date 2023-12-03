@@ -1,0 +1,18 @@
+body{
+    background-image: url(https://i.postimg.cc/nrNZvXcv/watches-with-drops-o.jpg);
+}
+
+.title{
+    font-family: 'Jacques Francois Shadow';font-size: 22px;
+    font-size: 50px;
+    color: aliceblue;
+}
+
+span{
+    color: brown;
+    font-weight: bolder;
+}
+
+.container{
+    height: 100vh;
+}
