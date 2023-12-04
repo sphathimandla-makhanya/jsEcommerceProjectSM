@@ -1,5 +1,29 @@
-body{
-    background-image: url(https://i.postimg.cc/nrNZvXcv/watches-with-drops-o.jpg);
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar */
+#CartLogo{
+    height: 35px;
+}
+#CartLogo:hover{
+    height: 40px;
+    background-color: brown;
+    border-radius: 5px;
+    border: solid 0.3px black;
+    padding: 3px;
+}
+
+/* landing page body */
+#landing{
+  /* background-image: linear-gradient(cadetblue, grey, cadetblue);  */
+  height: 100svh;
+  background-image: url(https://i.postimg.cc/BbBw4Z0Z/time-3091031-1920.jpg);
+  background-size: cover;
+  background-position: center;
+
+
 }
 
 .title{
@@ -11,8 +35,21 @@ body{
 span{
     color: brown;
     font-weight: bolder;
+} 
+
+/* About page */
+#about{
+    text-align: center;
+    background-color: #7BB090;
+}
+#aboutmain{
+    text-align: center;
 }
 
-.container{
-    height: 100vh;
+
+/* footer */
+footer{
+    height: 50px;
+    text-align: center;
+    font-size: large;
 }
