@@ -19,8 +19,8 @@
 #landing{
   /* background-image: linear-gradient(cadetblue, grey, cadetblue);  */
   height: 100svh;
-  /* background-image: url(https://i.postimg.cc/BvbDNDbK/watches-with-drops-o.jpg); */
-  background-image: url(https://i.postimg.cc/BbBw4Z0Z/time-3091031-1920.jpg);
+  background-image: url(https://i.postimg.cc/BvbDNDbK/watches-with-drops-o.jpg);
+  /* background-image: url(https://i.postimg.cc/BbBw4Z0Z/time-3091031-1920.jpg); */
   background-size: cover;
   background-position: center;
 }
@@ -46,14 +46,15 @@ span{
 }
 
 /* Product page */
-#search{
-    width: 20px;
-}
-
 .btn{
-    height: 25px;
-}
+    width: 80px;
+} 
 
+/* admin */
+.table img{
+    height: 50px;
+    width: 50px;
+}
 
 /* footer */
 footer{

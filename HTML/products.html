@@ -13,7 +13,7 @@
     <header>
         <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-              <a class="navbar-brand fs-2" href="#">SM</a>
+              <a class="navbar-brand fs-3" href="#">SM</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -39,7 +39,7 @@
                     <a class="nav-link" href="/HTML/contact.html">Contact</a>
                   </li>
                 </ul>
-                <ul class="ms-auto me-5  mt-2">
+                <ul class="ms-auto pe-5">
                     <a class="nav-link" href=""><img id="CartLogo" src="https://i.postimg.cc/mkWVNygp/3523885.png" alt="Add to cart"></a>
                 </ul>
               </div>
@@ -48,21 +48,18 @@
     </header>
     
     <main class="container">
-      <form class="d-flex pt-3">
-        <input class="me-2  ms-auto" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit"><img id="search" src="https://i.postimg.cc/QNSJhX7S/5636698.png"></button>
+      <form class="d-flex pt-2" role="search">
+        <button class="btn btn-outline-success ms-3" type="submit" data-sortBtn>Sort</button>
+        <input  class="ms-auto pe-3" data-searchInput type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success ms-3" data-searchBtn type="submit">Search</button>
       </form>
 
-      <!-- <div class="card" style="width: 18rem;">
-        <img src="..." class="card-img-top" alt="...">
-        <div class="card-body">
-          <a href="#" class="btn btn-primary">Go somewhere</a>
-        </div>
-      </div> -->
+      <div data-products class="d-flex row ">
+      
+      </div>
+      
+      
 
-      <table class="table">
-
-      </table>
     </main>
 
     <footer class="container-fluid bg-light fixed-bottom" >
