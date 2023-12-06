@@ -35,6 +35,8 @@ items = JSON.parse(localStorage.getItem('items'))
 //display the objects in html
 let product = document.querySelector('[data-products]')
 
+
+//function for sending/viewing items in the product page
 function updator() {
     let itemUpdator = items.map(function (item, index) {
         return `
@@ -56,26 +58,24 @@ function updator() {
 updator()
 
 // Declaring the search buttons and input area and sort button
-let emptyArray=[]
 let search = document.querySelector('[data-searchBtn]')
 let searchInput = document.querySelector('[data-searchInput]')
 
 
 // ############################################################################
 // seacrh button activation
-function searchFunction() {
-    let searchInput = document.querySelector('[data-searchInput]').value
-    let i = items.filter(item=>{
-        item.name=searchInput;
-       })
-    if(searchInput=i){
-        alert('item');
-    }else{
-        alert('Item not found')
+// i is the search results,
+function searchFunction(event) {
+    event.preventDefault() //prevents page from refreshing automatically
+    let i = items.filter(item =>
+        item.name.includes(searchInput.value));     //filters through the items array 
+        if (i.length === 0) {
+            alert('Item not found')
+        }else{
+            items=i; //update the items array with the search value
+           updator() //calling the product transfer function above
+        }
     }
-
-}
-
 search.addEventListener('click', searchFunction)
 
 
