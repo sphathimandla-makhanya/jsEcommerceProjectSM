@@ -1,9 +1,6 @@
 // Empty array to store purchased items
 let addToCart=[]
 
-let unique = addToCart.filter(function (index, array) {
-    return array.indexOf(index)===index;
-})
 //getting items from local storage and converting the back to object format
 items = JSON.parse(localStorage.getItem('items'))
 
@@ -15,7 +12,7 @@ let product = document.querySelector('[data-products]')
 function updator() {
     let itemUpdator = items.map(function (item, index) {
         return `
-        <div class="card m-3 text-center" style="width: 18rem;">
+        <div class="card ms-5 m-3 text-center" style="width: 18rem;">
         <img src="${item.url}" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title">${item.name}</h5>
