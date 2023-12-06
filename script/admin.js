@@ -65,10 +65,7 @@ function sphathi () {
 
                 items = JSON.parse(localStorage.getItem('items'))
             }
-
-            // Styling using js 
-            // table.style.display = 'none' //for spinner
-            
+     
 
 
             // button
@@ -88,3 +85,4 @@ function sphathi () {
                     // alert(event.target.value)
     }
 })
+
