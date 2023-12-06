@@ -14,9 +14,9 @@ function ItemGenerator(id, name, description, quantity, price, url) {
 // generating items/objects from the from the ItemGenerator function
 let item1 = new ItemGenerator(1, "Fossil", "Machine Brown Leather Chronograph Watch", "", 900, 'https://i.postimg.cc/j5wBSvzd/images-of-a-watch.jpg') 
 let item2 = new ItemGenerator(2, "Rolex", "Wrist Watch", "", 900, 'https://i.postimg.cc/NfjNbpzJ/images-of-a-watch-1.jpg') 
-let item3 = new ItemGenerator(3, "Casio", "Wrist Watch", "", 700, 'https://i.postimg.cc/BbBw4Z0Z/time-3091031-1920.jpg') 
+let item3 = new ItemGenerator(3, "Casio", "Wrist Watch", "", 700.25, 'https://i.postimg.cc/BbBw4Z0Z/time-3091031-1920.jpg') 
 let item4 = new ItemGenerator(4, "Extreme", "Wrist Watch", "", 2500, 'https://i.postimg.cc/NfjNbpzJ/images-of-a-watch-1.jpg') 
-let item5 = new ItemGenerator(5, "Fossil", "Wrist Watch", "", 900, 'https://i.postimg.cc/BvbDNDbK/watches-with-drops-o.jpg') 
+let item5 = new ItemGenerator(5, "Fossil", "Wrist Watch", "", 900.35, 'https://i.postimg.cc/BvbDNDbK/watches-with-drops-o.jpg') 
 let item6 = new ItemGenerator(6, "Fossil", "Wrist Watch", "", 1000, 'https://i.postimg.cc/BvbDNDbK/watches-with-drops-o.jpg') 
 let item7 = new ItemGenerator(7, "Fossil", "Wrist Watch", "", 950, 'https://i.postimg.cc/NfjNbpzJ/images-of-a-watch-1.jpg') 
 let item8 = new ItemGenerator(8, "Fossil", "Wrist Watch", "", 9700, 'https://i.postimg.cc/BbBw4Z0Z/time-3091031-1920.jpg') 
