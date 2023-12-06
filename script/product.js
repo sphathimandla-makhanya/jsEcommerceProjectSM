@@ -78,8 +78,19 @@ function searchFunction(event) {
     }
 search.addEventListener('click', searchFunction)
 
-
+// sorting button and function
 let sort = document.querySelector('[data-sortBtn]')
+function sortItem(event) {
+    event.preventDefault()
+    let sortByPrice = items.sort((a, b)=>{
+        return parseInt(a.price) - parseInt(b.price)  //declared an arrow function for sorting by price
+    })
+    updator(sortByPrice)
+}
+
+sort.addEventListener('click', sortItem)
+
+
 
 
 
