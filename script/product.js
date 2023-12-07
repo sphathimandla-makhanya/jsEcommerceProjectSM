@@ -1,6 +1,7 @@
 // Empty array to store purchased items
 let addToCart=[]
 
+
 //getting items from local storage and converting the back to object format
 items = JSON.parse(localStorage.getItem('items'))
 
