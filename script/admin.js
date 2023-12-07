@@ -35,7 +35,7 @@ items = JSON.parse(localStorage.getItem('items'))
 let table = document.querySelector('table')
 
 
-function sphathi () {
+function updator () {
     // index is also the position 
     // using the map method to loop through the array
     let products = items.map(function (item, index) {
@@ -58,7 +58,7 @@ function sphathi () {
                 table.innerHTML= products.join('');
     
 }
-      sphathi()      
+      updator()      
 
             function favourite () {
                 localStorage.setItem('items',JSON.stringify(items))
@@ -77,7 +77,7 @@ function sphathi () {
             function remove(position) {
                 items.splice(position, 1);
                 favourite(); //nested function
-                sphathi();//nested function 
+                updator();//nested function 
             }
             table.addEventListener('click', function () {
                 if(event.target.classList.contains('delete')){
@@ -85,4 +85,31 @@ function sphathi () {
                     // alert(event.target.value)
     }
 })
+
+// Modal
+
+function updateData() {
+    localStorage.setItem('items', JSON.stringify(items))
+    items = JSON.parse(localStorage.getItem('items'))
+}
+let modal = document.querySelector('[modal-body]');
+let button = document.querySelector('[data-modal]');
+
+button.addEventListener('click', function () {
+    // alert('ho')
+    let name =document.querySelector('[data-name]')
+    let description = document.querySelector('[data-description]')
+    let price = document.querySelector('[data-price]')
+    let imgUrl = document.querySelector('[data-url]') 
+    let newObject= new ItemGenerator(id, name, description, quantity, price, url)
+    items.push(newObject)
+    modal.show()
+})
+
+
+
+
+
+
+
 
