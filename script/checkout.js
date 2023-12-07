@@ -17,7 +17,7 @@ function updator () {
                   <td><input inputQ type="number"></input></td>
                   <td price >R${item.price}</td>
                   <td><img src='${item.url}'></td>
-                  <td><button class="delete" value='${index}'>Delete</button></td>
+                  <td><button type="button" class="delete btn btn-danger"class="delete" value='${index}'>Danger</button></td>
                   </tr>`
               })
               

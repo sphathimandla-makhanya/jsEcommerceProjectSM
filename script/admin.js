@@ -63,7 +63,12 @@ function updator () {
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
                           <div class="modal-body">
-                            ...
+                          <input type="text" placeholder="id" edit-id name="item name" id="item name">
+                          <input type="text" placeholder="Name" edit-name name="item name" id="item name">
+                          <input type="text" placeholder="description" edit-description name="item name" id="item name">
+                          <input type="text" placeholder="quantity" edit-Q name="item name" id="item name">
+                          <input type="text" placeholder="price" edit-price name="item name" id="item name">
+                          <input type="text" placeholder="url" edit-url name="item name" id="item name">
                           </div>
                           <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -72,7 +77,7 @@ function updator () {
                         </div>
                       </div>
                     </div></td>
-                    <td><button class="delete" value='${index}'>Delete</button></td>
+                    <td><button type="button" class="delete btn btn-danger" value='${index}'>Delete</button></td>
                     </tr>`
                 })
                 
@@ -120,7 +125,7 @@ let button = document.querySelector('[save]');
 
 button.addEventListener('click', newProduct)
 function newProduct(){
-    let id = document.querySelector('[data-id]')
+    let id = document.querySelector('[data-id]').value
     let name =document.querySelector('[data-name]').value
     let description = document.querySelector('[data-description]').value
     let quantity = document.querySelector('[data-Q]')
@@ -133,10 +138,9 @@ function newProduct(){
 }
 
 // Edit
-let editbtn = document.querySelectorAll('[edit]')
-editbtn.forEach(button=>{
-    button.addEventListener('click', function(){
-        alert('hello')
-        addItems(event.target.value)
-    })
-})
+let idEdit = document.querySelector('[edit-id]').value
+let nameEdit =document.querySelector('[edit-name]').value
+let descriptionEdit = document.querySelector('[edit-description]').value
+let quantityEdit = document.querySelector('[edit-Q]').value
+let priceEdit = document.querySelector('[edit-price]').value
+let urlEdit = document.querySelector('[edit-url]').value

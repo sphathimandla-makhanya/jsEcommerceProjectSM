@@ -9,9 +9,9 @@
     <!-- css link  -->
     <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
+<body class="contact">
     <header>
-        <nav id="nav" class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav id="nav" class="navbar navbar-expand-lg text-white  bg-success">
             <div class="container-fluid">
               <a class="navbar-brand fs-3" href="#">SM</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,66 +39,58 @@
                     <a class="nav-link" href="/HTML/contact.html">Contact</a>
                   </li>
                 </ul>
-                <ul class="ms-auto pe-5">
-                    <a class="nav-link" href=""><img id="CartLogo" src="https://i.postimg.cc/mkWVNygp/3523885.png" alt="Add to cart"></a>
-                </ul>
               </div>
             </div>
         </nav>
     </header>
     
     <main class="container">
-      <h1 class="text-center  pt-3 pb-3">Contact Us</h1>
-      <form action="" method="" class="row g-3">
-        <div class="col-md-6">
-          <label class="form-label">FirstName:</label>
-          <input type="text" class="form-control" id="inputEmail4">
-        </div>
-        <div class="col-md-6">
-          <label class="form-label">LastName:</label>
-          <input type="text" class="form-control" id="lastName">
-        </div>
-        <div class="col-12">
-          <label class="form-label">email Address</label>
-          <input type="email" class="form-control" id="emailAddress" placeholder="crafted@gmail.com">
-        </div>
-        <div class="col-12">
-          <label for="inputAddress2" class="form-label">Message: </label>
-          <textarea id="message" class="form-control" cols="30" rows="5"></textarea>
-        </div>
-        <div class="col-12">
-          <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
-      </form>
-
-
-      <h3>Reach out to us</h3>
-      <table class="table table-striped mt-3">
+      <h1 class="text-center  pt-2 pb-1">Contact Us</h1>
+      <table class="table table-striped mt-2">
         <tbody>
           <tr>
-            <th scope="row"><img src="https://i.postimg.cc/T1Jb3vmd/5399485.png"></th>
+            <th scope="row"><img id="contactImg" src="https://i.postimg.cc/T1Jb3vmd/5399485.png"></th>
             <td>0603364154</td>
           </tr>
           <tr>
-            <th scope="row"><img src="https://i.postimg.cc/8PhFDGGx/646135.png"></th>
+            <th scope="row"><img id="contactImg" src="https://i.postimg.cc/8PhFDGGx/646135.png"></th>
             <td>crafted@gmail.com</td>
           </tr>
           <tr>
-            <th scope="row"><img src="https://i.postimg.cc/760VycZ9/535188.png"></th>
+            <th scope="row"><img id="contactImg" src="https://i.postimg.cc/760VycZ9/535188.png"></th>
             <td>314 Imam Haron, Lansdowne</td>
           </tr>
         </tbody>
       </table>
-        
+      
+      <h3>Enquires</h3>
+      <form action="" method="" class="row g-2">
+        <div class="col-md-6">
+          <label class="form-label">First Name:</label>
+          <input type="text" class="form-control" id="inputEmail4">
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Last Name:</label>
+          <input type="text" class="form-control" id="lastName">
+        </div>
+        <div class="col-12">
+          <label class="form-label">Email Address:</label>
+          <input type="email" class="form-control" id="emailAddress" placeholder="crafted@gmail.com">
+        </div>
+        <div class="col-12">
+          <label for="inputAddress2" class="form-label">Message: </label>
+          <textarea id="message" class="form-control" cols="30" rows="2"></textarea>
+        </div>
+        <div class="col-12">
+          <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+      </form>       
     </main>
 
 
-    <footer class="container-fluid bg-light fixed-bottom" >
-        2023@CraftedCreations
+    <footer class="container-fluid bg-success fw-bold pt-2 fixed-bottom" >
+        2023<span class="danger">@</span>CraftedCreations
     </footer>
-
-
-
 
     <!-- bootstrap script link -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
