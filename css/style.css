@@ -4,15 +4,12 @@
 }
 
 /* Navbar */
-#CartLogo{
-    height: 35px;
-}
-#CartLogo:hover{
-    height: 40px;
-    background-color: brown;
+.navbar a:hover{
+    margin: 1px;
+    padding: 0.5px;
+    background-color: black;
     border-radius: 5px;
-    border: solid 0.3px black;
-    padding: 3px;
+    color: azure;
 }
 
 /* landing page body */
@@ -45,6 +42,14 @@ span{
     text-align: center;
 }
 
+/* media queries */
+@media screen and (max-width: 421px) {
+    iframe{
+        width: auto;
+        height: auto;
+    }
+}
+
 /* Product page */
 .btn{
     width: 80px;
@@ -60,6 +65,25 @@ span{
 table tr td img{
     height: 60px;
     width: 60px;
+}
+
+/* media queries */
+@media screen and (max-width: 720px) {
+    table{
+        width: auto;
+        height: auto;
+    }
+}
+
+/* Contacts */
+
+#contactImg{
+    height: 20px;
+    width: 20px;
+}
+
+.contact{
+    background-color: #8D8D65;
 }
 
 
