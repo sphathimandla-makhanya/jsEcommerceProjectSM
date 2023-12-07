@@ -56,6 +56,13 @@ span{
     width: 50px;
 }
 
+/* Checkout */
+table tr td img{
+    height: 60px;
+    width: 60px;
+}
+
+
 /* footer */
 footer{
     height: 50px;
