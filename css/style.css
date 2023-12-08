@@ -55,6 +55,12 @@ span{
     width: 80px;
 } 
 
+.spinner{
+   margin-left: 39rem;
+   margin-top: 3rem;
+   margin-bottom: 3rem;
+}
+
 /* admin */
 .table img{
     height: 50px;

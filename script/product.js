@@ -62,8 +62,8 @@ function sortItem(event) {
 sort.addEventListener('click', sortItem)
 
 //declaring Spinner
-let spinner = `<div class="text-center">
-<div class="spinner-border spinner-grow" role="status">
+let spinner = `<div class="spinner">
+<div class="spinner-grow text-light d-flex justify-content-center" role="status">
   <span class="visually-hidden">Loading...</span>
 </div>
 </div>`
@@ -81,7 +81,7 @@ function addItems(index) {
     {addToCart.push(items[index]) 
         localStorage.setItem('addToCart',JSON.stringify(addToCart))   
     }else{
-        alert('Item exists')
+        alert('Item already exists')
     }
     
 }
