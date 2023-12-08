@@ -34,8 +34,6 @@ updator()
 let search = document.querySelector('[data-searchBtn]')
 let searchInput = document.querySelector('[data-searchInput]')
 
-
-// ############################################################################
 // seacrh button activation
 // i is the search results,
 function searchFunction(event) {
@@ -51,10 +49,10 @@ function searchFunction(event) {
     }
 search.addEventListener('click', searchFunction)
 
-// sorting button and function
+// sorting button and function for sorting
 let sort = document.querySelector('[data-sortBtn]')
 function sortItem(event) {
-    event.preventDefault()
+    event.preventDefault()   //prevents page from automatically refreshing 
     let sortByPrice = items.sort((a, b)=>{
         return parseInt(a.price) - parseInt(b.price)  //declared an arrow function for sorting by price
     })
@@ -76,28 +74,21 @@ if(items.length==0){
     updator()
 }
 
-
-// add to cart button
-let cartbtn = document.querySelectorAll('[data-cartbtn]')
-
 //add items using their indexes as reference 
-// function addItems(index) {
-//     addToCart.push(items[index])
-    
-//     localStorage.setItem('addToCart',JSON.stringify(addToCart))
-    
-// }
-
+// adding items selected items into the addToCart array and saving it into local storage
 function addItems(index) {
-    addToCart.push(items[index])
-    
-    localStorage.setItem('addToCart',JSON.stringify(addToCart))
+    if(!addToCart.includes(items[index]))
+    {addToCart.push(items[index]) 
+        localStorage.setItem('addToCart',JSON.stringify(addToCart))   
+    }else{
+        alert('Item exists')
+    }
     
 }
 
-
-
-
+// add to cart button
+let cartbtn = document.querySelectorAll('[data-cartbtn]')
+// event listner nested in a forEach method that calls a function to add each item into checkout
 cartbtn.forEach(button=>{
     button.addEventListener('click', function(){
         addItems(event.target.value)
