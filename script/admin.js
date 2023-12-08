@@ -61,7 +61,6 @@ function updator () {
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                           </div>
                           <div class="modal-body">
-                          <input type="text" placeholder="id" edit-id name="item name" id="item name">
                           <input type="text" placeholder="Name" edit-name name="item name" id="item name">
                           <input type="text" placeholder="description" edit-description name="item name" id="item name">
                           <input type="text" placeholder="quantity" edit-Q name="item name" id="item name">
@@ -83,7 +82,9 @@ function updator () {
                 table.innerHTML= products.join('');
     
 }
-      updator()      
+      updator()    
+      
+
           //Saving and fetching items to local storage
             function storage () {
                 localStorage.setItem('items',JSON.stringify(items))
@@ -137,27 +138,30 @@ function sortItem(event) {
         return parseInt(a.price) - parseInt(b.price)  //declared an arrow function for sorting by price
     })
     updator(sortByPrice)
+    
 }
 
 sort.addEventListener('click', sortItem)
 
-//declaring Spinner
-let spinner = `<div class="text-center">
-<div class="spinner-border spinner-grow" role="status">
-  <span class="visually-hidden">Loading...</span>
-</div>
-</div>`
-//If array items is empty the product html must display the spinner 
-if(items.length==0){
-   table.innerHTML= spinner
-}else{
-    updator()
+// try annd catch
+function sortError() {
+  try {
+    if(items===0){
+      throw new Error('Items is empty')
+    }
+  } catch (error) {
+    alert('request denied');
+  }
+
+  return items
 }
 
-// Edit
-// let idEdit = document.querySelector('[edit-id]').value
-// let nameEdit =document.querySelector('[edit-name]').value
-// let descriptionEdit = document.querySelector('[edit-description]').value
-// let quantityEdit = document.querySelector('[edit-Q]').value
-// let priceEdit = document.querySelector('[edit-price]').value
-// let urlEdit = document.querySelector('[edit-url]').value
+console.log(sortError());
+
+// ###########################################################################3
+ // Edit
+ let nameEdit =document.querySelector('[edit-name]').value
+ let descriptionEdit = document.querySelector('[edit-description]').value
+ let quantityEdit = document.querySelector('[edit-Q]').value
+ let priceEdit = document.querySelector('[edit-price]').value
+ let urlEdit = document.querySelector('[edit-url]').value

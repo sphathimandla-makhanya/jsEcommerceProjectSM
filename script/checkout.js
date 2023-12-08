@@ -53,9 +53,16 @@ checkoutItems.addEventListener('click', function () {
 
 
 // #########################################################################
-let inputValue= document.querySelector('[data]')
-
-
+ //declaring Spinner
+ let spinner = `<div class="spinner-grow" role="status">
+ <span class="visually-hidden">Loading...</span>
+</div>`
+ //If array items is empty the product html must display the spinner 
+ if(addToCart.length==0){
+  checkoutItems.innerHTML= spinner
+ }else{
+     updator()
+ }
 
 //##########################################################################
 // Tatol price computation
