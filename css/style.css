@@ -55,6 +55,7 @@ span{
     width: 80px;
 } 
 
+
 .spinner{
    margin-left: 39rem;
    margin-top: 3rem;
@@ -67,6 +68,9 @@ span{
     width: 50px;
 }
 
+.adminMain{
+    height: 100svh;
+}
 /* media queries admin */
 @media screen and (max-width: 560px) {
     #adminTable{
@@ -123,4 +127,11 @@ footer{
 
 .card-img-top{
     height: 200px;
+}
+
+/* media queries */
+@media screen and (max-width: 410px) {
+    footer{
+        display: none;
+    }
 }
