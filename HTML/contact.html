@@ -64,27 +64,28 @@
       </table>
       
       <h3>Enquires</h3>
-      <form action="" method="" class="row g-3">
+      <form action="https://formspree.io/f/xknldbkl" method="POST" class="row g-3">
         <div class="col-md-6">
-          <label class="form-label">First Name:</label>
-          <input type="text" class="form-control" id="inputEmail4">
+          <label for="firstName" class="form-label">First Name:</label>
+          <input type="text" class="form-control" id="firstName" name="firstName">
         </div>
         <div class="col-md-6">
-          <label class="form-label">Last Name:</label>
-          <input type="text" class="form-control" id="lastName">
+          <label for="lastName" class="form-label">Last Name:</label>
+          <input type="text" class="form-control" id="lastName" name="lastName">
         </div>
         <div class="col-12">
-          <label class="form-label">Email Address:</label>
-          <input type="email" class="form-control" id="emailAddress" placeholder="crafted@gmail.com">
+          <label for="email" class="form-label">Email Address:</label>
+          <input type="email" class="form-control" id="email" name="email" placeholder="crafted@gmail.com">
         </div>
         <div class="col-12">
-          <label for="inputAddress2" class="form-label">Message: </label>
-          <textarea id="message" class="form-control" cols="30" rows="2"></textarea>
+          <label for="message" class="form-label">Message:</label>
+          <textarea id="message" class="form-control" name="message" cols="30" rows="2"></textarea>
         </div>
         <div class="col-12">
           <button type="submit" class="btn btn-success mb-5">Submit</button>
         </div>
-      </form>       
+      </form>
+          
     </main>
 
 
