@@ -14,8 +14,8 @@ function updator () {
                   <td>${item.id}</td>
                   <td>${item.name}</td>
                   <td>${item.description}</td>
-                  <td><input inputQ type="number"></input></td>
-                  <td price >R${item.price}</td>
+                  <td><input data-inputQ type="number"></input></td>
+                  <td data-price >R${item.price}</td>
                   <td><img src='${item.url}'></td>
                   <td><button type="button" class="delete btn btn-danger"class="delete" value='${index}'>Danger</button></td>
                   </tr>`
@@ -52,9 +52,16 @@ checkoutItems.addEventListener('click', function () {
 }
 })
 
-let total=document.querySelector('[data-total]');
-let TotalPrice =addToCart.reduce((selectedItems, reduceItems)=>{
-  return selectedItems + reduceItems.price
-},0);
 
-total=document.write(TotalPrice )
+// Tatol price computation
+let total=document.querySelector('[data-total]');
+
+function toatalP() {
+  let total=document.querySelector('[data-total]');
+let totalPrice =addToCart.reduce((selectedItems, reduceItems)=>{
+  return selectedItems + reduceItems.price
+},0);                           //reduce function for calculating the total price of items in the array for purchased items  
+return totalPrice
+}
+
+total.textContent=` R${toatalP()}`
