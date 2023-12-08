@@ -141,6 +141,19 @@ function sortItem(event) {
 
 sort.addEventListener('click', sortItem)
 
+//declaring Spinner
+let spinner = `<div class="text-center">
+<div class="spinner-border spinner-grow" role="status">
+  <span class="visually-hidden">Loading...</span>
+</div>
+</div>`
+//If array items is empty the product html must display the spinner 
+if(items.length==0){
+   table.innerHTML= spinner
+}else{
+    updator()
+}
+
 // Edit
 // let idEdit = document.querySelector('[edit-id]').value
 // let nameEdit =document.querySelector('[edit-name]').value
