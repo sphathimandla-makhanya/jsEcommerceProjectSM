@@ -45,7 +45,7 @@ span{
 /* media queries */
 @media screen and (max-width: 421px) {
     iframe{
-        width: auto;
+        width: 280px;
         height: auto;
     }
 }
@@ -60,6 +60,15 @@ span{
     height: 50px;
     width: 50px;
 }
+
+/* media queries admin */
+@media screen and (max-width: 560px) {
+    #adminTable{
+        width: 280px;
+        height: auto;
+    }
+}
+
 
 /* Checkout */
 table tr td img{
@@ -92,4 +101,20 @@ footer{
     height: 50px;
     text-align: center;
     font-size: large;
+}
+
+#iconsF{
+    height: 20px;
+    width: 20px;
+}
+
+#iconsF:hover{
+    background-color: aliceblue;
+    border-radius: 5px;
+    padding: 2px;
+}
+
+
+.card-img-top{
+    height: 200px;
 }

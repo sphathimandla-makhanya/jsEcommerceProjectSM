@@ -1,9 +1,8 @@
-//Declaring an array to store the items as objects
+//Declaring an array to store the items as generated from the ItemGenerator function
 let items = []
 
 // Creating a constructor function to generate items/objects
-function ItemGenerator(id, name, description, quantity, price, url) {
-    this.id = id,
+function ItemGenerator(name, description, quantity, price, url) {
     this.name = name,
     this.description = description,
     this.quantity = quantity,
@@ -12,15 +11,15 @@ function ItemGenerator(id, name, description, quantity, price, url) {
 }
 
 // generating items/objects from the from the ItemGenerator function
-let item1 = new ItemGenerator(1, "Gucci", "Dive Watch, 45mm", "", 32500, 'https://i.postimg.cc/j5wBSvzd/images-of-a-watch.jpg') 
-let item2 = new ItemGenerator(2, "Rolex", "Wrist Watch", "", 900, 'https://i.postimg.cc/NfjNbpzJ/images-of-a-watch-1.jpg') 
-let item3 = new ItemGenerator(3, "Casio", "Wrist Watch", "", 700.25, 'https://i.postimg.cc/BbBw4Z0Z/time-3091031-1920.jpg') 
-let item4 = new ItemGenerator(4, "Petite Melrose", "Ladies Wrist Watch", "", 2500, 'https://i.postimg.cc/PJ6GYqv7/ladies-wrist-watch.jpg') 
-let item5 = new ItemGenerator(5, "Garmin (Gen 2)", "MARQ Aviator Watch", "", 56099, 'https://i.postimg.cc/Y0LVGxkv/1168951-SILVERSILVER-1-DNC.webp') 
-let item6 = new ItemGenerator(6, "Fossil", "Wrist Watch", "", 1000, 'https://i.postimg.cc/BvbDNDbK/watches-with-drops-o.jpg') 
-let item7 = new ItemGenerator(7, "Fossil", "Brown Leather Chronograph Watch", "", 4000, 'https://i.postimg.cc/431WmS9L/01.jpg') 
-let item8 = new ItemGenerator(8, "Fossil", "Wrist Watch", "", 9700, 'https://i.postimg.cc/BbBw4Z0Z/time-3091031-1920.jpg') 
-let item9 = new ItemGenerator(9, "Fossil", "Wrist Watch", "", 1520, 'https://i.postimg.cc/NfjNbpzJ/images-of-a-watch-1.jpg') 
+let item1 = new ItemGenerator("Gucci", "Dive Watch, 45mm", "", 32500, 'https://i.postimg.cc/j5wBSvzd/images-of-a-watch.jpg') 
+let item2 = new ItemGenerator("Rolex", "Wrist Watch", "", 900, 'https://i.postimg.cc/NfjNbpzJ/images-of-a-watch-1.jpg') 
+let item3 = new ItemGenerator("Casio", "Wrist Watch", "", 700.25, 'https://i.postimg.cc/BbBw4Z0Z/time-3091031-1920.jpg') 
+let item4 = new ItemGenerator("Petite Melrose", "Ladies Wrist Watch", "", 2500, 'https://i.postimg.cc/PJ6GYqv7/ladies-wrist-watch.jpg') 
+let item5 = new ItemGenerator("Garmin (Gen 2)", "MARQ Aviator Watch", "", 56099, 'https://i.postimg.cc/Y0LVGxkv/1168951-SILVERSILVER-1-DNC.webp') 
+let item6 = new ItemGenerator("Fossil", "Wrist Watch", "", 1000, 'https://i.postimg.cc/BvbDNDbK/watches-with-drops-o.jpg') 
+let item7 = new ItemGenerator("Fossil", "Brown Leather Chronograph Watch", "", 4000, 'https://i.postimg.cc/431WmS9L/01.jpg') 
+let item8 = new ItemGenerator("Fossil", "Wrist Watch", "", 9700, 'https://i.postimg.cc/BbBw4Z0Z/time-3091031-1920.jpg') 
+let item9 = new ItemGenerator("Fossil", "Wrist Watch", "", 1520, 'https://i.postimg.cc/NfjNbpzJ/images-of-a-watch-1.jpg') 
 
 //Storing the items in the previoursly declared items array
 items.push(item1, item2, item3, item4, item5, item6, item7, item8, item9);
@@ -34,17 +33,16 @@ items = JSON.parse(localStorage.getItem('items'))
 // Using query selector to display the objects in html
 let table = document.querySelector('table')
 
-
+// function for updating items in html
 function updator () {
     // index is also the position 
     // using the map method to loop through the array
     let products = items.map(function (item, index) {
         //log code just to check if it working
-        // console.log(item);
-        // console.log(index);
+        
         return `
         <tr>
-                    <td>${item.id}</td>
+                    <td>${index+1}</td>
                     <td>${item.name}</td>
                     <td>${item.description}</td>
                     <td>R${item.price}</td>
@@ -81,13 +79,13 @@ function updator () {
                     </tr>`
                 })
                 
-                // since map create an array you have to join the when writing items into html in a object format rather than an array
+                // since map create an array you have to use join when writing items into html in a object format rather than an array
                 table.innerHTML= products.join('');
     
 }
       updator()      
-
-            function favourite () {
+          //Saving and fetching items to local storage
+            function storage () {
                 localStorage.setItem('items',JSON.stringify(items))
 
                 items = JSON.parse(localStorage.getItem('items'))
@@ -95,7 +93,7 @@ function updator () {
      
 
 
-            // button
+            // button for deleting items in admin
             let deleteButton=document.querySelector('.delete')
 
 
@@ -103,7 +101,7 @@ function updator () {
             // function for removing item/s
             function remove(position) {
                 items.splice(position, 1);
-                favourite(); //nested function
+                storage(); //nested function
                 updator();//nested function 
             }
             table.addEventListener('click', function () {
@@ -114,13 +112,7 @@ function updator () {
 })
 
 // Modal
-
-function updateData() {
-    localStorage.setItem('items', JSON.stringify(items))
-    items = JSON.parse(localStorage.getItem('items'))
-}
-
-
+// 
 let button = document.querySelector('[save]');
 
 button.addEventListener('click', newProduct)
@@ -133,7 +125,7 @@ function newProduct(){
     let url = document.querySelector('[data-url]').value
     let newObject= new ItemGenerator(id, name, description, quantity, price, url)
     items.push(newObject)
-    updateData()
+    storage()
     updator()
 }
 
@@ -150,9 +142,9 @@ function sortItem(event) {
 sort.addEventListener('click', sortItem)
 
 // Edit
-let idEdit = document.querySelector('[edit-id]').value
-let nameEdit =document.querySelector('[edit-name]').value
-let descriptionEdit = document.querySelector('[edit-description]').value
-let quantityEdit = document.querySelector('[edit-Q]').value
-let priceEdit = document.querySelector('[edit-price]').value
-let urlEdit = document.querySelector('[edit-url]').value
+// let idEdit = document.querySelector('[edit-id]').value
+// let nameEdit =document.querySelector('[edit-name]').value
+// let descriptionEdit = document.querySelector('[edit-description]').value
+// let quantityEdit = document.querySelector('[edit-Q]').value
+// let priceEdit = document.querySelector('[edit-price]').value
+// let urlEdit = document.querySelector('[edit-url]').value
