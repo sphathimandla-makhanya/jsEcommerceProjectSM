@@ -11,15 +11,15 @@ function ItemGenerator(name, description, quantity, price, url) {
 }
 
 // generating items/objects from the from the ItemGenerator function
-let item1 = new ItemGenerator("Gucci", "Dive Watch, 45mm", "", 32500, 'https://i.postimg.cc/j5wBSvzd/images-of-a-watch.jpg') 
-let item2 = new ItemGenerator("Rolex", "Wrist Watch", "", 90000, 'https://i.postimg.cc/NfjNbpzJ/images-of-a-watch-1.jpg') 
-let item3 = new ItemGenerator("Casio", "Wrist Watch", "", 700.25, 'https://i.postimg.cc/BbBw4Z0Z/time-3091031-1920.jpg') 
+let item1 = new ItemGenerator("Gucci", "Dive Watch, 45mm", "", 32500, 'https://i.ibb.co/4mkDfVD/Gucci.jpg') 
+let item2 = new ItemGenerator("Rolex", "Wrist Watch", "", 90000, 'https://i.ibb.co/fSsn9ht/Rolex-Sky-Dweller-Black-Dial-Mens-Watch.webp') 
+let item3 = new ItemGenerator("Casio", "Wrist Watch", "", 700.25, 'https://i.ibb.co/vdQwb2H/retro-a500wga-1df.webp') 
 let item4 = new ItemGenerator("Petite Melrose", "Ladies Wrist Watch", "", 2500, 'https://i.postimg.cc/PJ6GYqv7/ladies-wrist-watch.jpg') 
 let item5 = new ItemGenerator("Garmin (Gen 2)", "MARQ Aviator Watch", "", 56099, 'https://i.postimg.cc/Y0LVGxkv/1168951-SILVERSILVER-1-DNC.webp') 
 let item6 = new ItemGenerator("Tempo", "Gents Rose", "", 1000, 'https://i.postimg.cc/BvbDNDbK/watches-with-drops-o.jpg') 
-let item7 = new ItemGenerator("Fossil", "Brown Leather Chronograph Watch", "", 4000, 'https://i.postimg.cc/431WmS9L/01.jpg') 
-let item8 = new ItemGenerator("Tag Heuer", "Calibbre Heuer", "", 132500, 'https://i.postimg.cc/B6VXCBxf/download.png') 
-let item9 = new ItemGenerator("Patek", "Philippe Nautilus", "", 1520, 'https://i.postimg.cc/NfjNbpzJ/images-of-a-watch-1.jpg') 
+let item7 = new ItemGenerator("Fossil", "Brown Leather Watch", "", 4000, 'https://i.postimg.cc/431WmS9L/01.jpg') 
+let item8 = new ItemGenerator("Tag Heuer", "Calibbre Heuer", "", 132500, 'https://i.ibb.co/MDvDj9C/SBR8-A10-BA0616-0913.png') 
+let item9 = new ItemGenerator("Patek", "Philippe Nautilus", "", 1520, 'https://i.ibb.co/4drRZ41/2000-1.webp') 
 
 //Storing the items in the previoursly declared items array
 items.push(item1, item2, item3, item4, item5, item6, item7, item8, item9);
@@ -135,7 +135,7 @@ let sort = document.querySelector('[data-sortBtn]')
 function sortItem(event) {
     event.preventDefault()
     let sortByPrice = items.sort((a, b)=>{
-        return parseInt(a.price) - parseInt(b.price)  //declared an arrow function for sorting by price
+        return parseInt(a.price) - parseInt(b.price) 
     })
     updator(sortByPrice)
     

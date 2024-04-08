@@ -62,6 +62,11 @@ span{
    margin-bottom: 3rem;
 }
 
+.card img{
+    height: 220px;
+    /* width: 270px; */
+}
+
 /* admin */
 .table img{
     height: 50px;
@@ -71,6 +76,7 @@ span{
 .adminMain{
     height: 100svh;
 }
+
 /* media queries admin */
 @media screen and (max-width: 560px) {
     #adminTable{
